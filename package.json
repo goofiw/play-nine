@@ -1,0 +1,27 @@
+{
+  "name": "play-nine",
+  "version": "1.0.0",
+  "description": "Simple math game written in Reactjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goofiw/play-nine.git"
+  },
+  "keywords": [
+    "node",
+    "react"
+  ],
+  "author": "goofiw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goofiw/play-nine/issues"
+  },
+  "homepage": "https://github.com/goofiw/play-nine#readme",
+  "dependencies": {
+    "express": "^4.13.1",
+    "jade": "^1.11.0"
+  }
+}

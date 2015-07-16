@@ -1,0 +1,23 @@
+{
+  "name": "play-nine",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/goofiw/play-nine",
+  "authors": [
+    "goofiw <goofiw@gmail.com>"
+  ],
+  "description": "Simple math game written in react",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "react": "~0.13.3"
+  }
+}
