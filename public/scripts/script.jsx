@@ -18,9 +18,11 @@ var StarsFrame = React.createClass({
 
 var ButtonFrame = React.createClass({
   render: function() {
+    var diasbled;
+    disabled = (this.props.selectedNumbers.length === 0);
     return (
         <div id='button-frame'>
-          <button className='btn btn-primary btn-lg'>=</button>
+          <button className='btn btn-primary btn-lg' disabled={disabled}>=</button>
         </div>
     );
   }
@@ -33,11 +35,11 @@ var AnswerFrame = React.createClass({
       return (
             <span onClick={props.unselectNumber.bind(null, i)}>{i}</span>
           );
-    })
+    });
     return (
         <div id='answer-frame'>
           <div className='well'>
-            {this.props.selectedNumbers}
+            {selectedNumbers}
           </div>
         </div>
     );
@@ -86,15 +88,17 @@ var Game = React.createClass({
     this.setState({selectedNumbers: selectedNumbers})
   },
   render: function(){
+    var selectedNumbers = this.state.selectedNumbers,
+        numberOfStars = this.state.numberOfStars;
     return (
       <div id='game'>
         <h2>Play Nine</h2>
         <hr />
         <div className='clearfix'>
-          <StarsFrame numberOfStars={this.state.numberOfStars}/>
-          <ButtonFrame />
-          <AnswerFrame selectedNumbers={this.state.selectedNumbers}
-                       unselectNumber={this.state.unselectNumber} />
+          <StarsFrame numberOfStars={numberOfStars}/>
+          <ButtonFrame selectedNumbers={selectedNumbers} />
+          <AnswerFrame selectedNumbers={selectedNumbers}
+                       unselectNumber={this.unselectNumber} />
         </div>
         <NumbersFrame selectedNumbers={this.state.selectedNumbers}
                       selectNumber={this.selectNumber} />
